@@ -1,0 +1,60 @@
+//
+//  BXGStudyPlayerListTableViewController.h
+//  Boxuegu
+//
+//  Created by RW on 2017/4/20.
+//  Copyright © 2017年 itcast. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "RWMultiDataSourse.h"
+
+typedef CGFloat(^HeightForRowBlockType)(UITableView *tableView,NSInteger section, RWMultiItem *item);
+typedef CGFloat(^HeightForHeaderInSectionBlockType)(UITableView *tableView,NSInteger section);
+typedef UIView *(^ViewForHeaderInSectionBlockType)(UITableView *tableView,NSInteger section, RWMultiItem *item);
+typedef void(^DidSelectRowBlockType)(UITableView *tableView, NSInteger section, RWMultiItem *item);
+//typedef void(^DidDeselectRowBlockType)(UITableView *tableView, NSIndexPath *indexPath, RWMultiItem *item);
+typedef NSArray *(^RootModelForTableViewBlockType)(UITableView *tableView);
+typedef NSArray *(^SubModelsForTableViewBlockType)(UITableView *tableView,NSInteger section, RWMultiItem *parentItem);
+
+
+#pragma mark - DataSourse
+typedef NSInteger(^NumberOfSectionsBlockType)(UITableView *tableView);
+typedef NSInteger(^NumberOfLevelBlockType)(UITableView *tableView, NSInteger section);
+typedef NSInteger(^NumberOfRowBlockType)(UITableView *tableView,NSInteger section, NSInteger level);
+
+typedef UITableViewCell*(^CellForRowBlockType)(UITableView *tableView, NSInteger section, RWMultiItem *item);
+typedef void(^DidSelectHeaderViewAtSectionBlockType)(UITableView *tableView, NSInteger section, RWMultiItem *item);
+
+@interface RWMultiTableView : UITableView
+
+@property (nonatomic, strong) NSMutableArray<RWMultiDataSourse *> *sectionDataSourseArray;
+
+@property (nonatomic, copy) CellForRowBlockType cellForRowBlock;
+
+@property (nonatomic, copy) RootModelForTableViewBlockType rootModelForTableViewBlock;
+@property (nonatomic, copy) SubModelsForTableViewBlockType subModelsForTableViewBlock;
+
+
+
+#pragma mark - delegate
+@property (nonatomic, copy) DidSelectRowBlockType didSelectRowBlock;
+//@property (nonatomic, copy) DidDeselectRowBlockType didDeselectRowBlock;
+
+@property (nonatomic, copy) HeightForRowBlockType heightForRowBlock;
+@property (nonatomic, copy) DidSelectHeaderViewAtSectionBlockType didSelectHeaderViewAtSectionBlock;
+@property (nonatomic, copy) HeightForHeaderInSectionBlockType heightForHeaderInSectionBlock;
+@property (nonatomic, copy) ViewForHeaderInSectionBlockType viewForHeaderInSectionBlock;
+
+
+- (void)installDataSourse;
+
+#pragma mark - operation
+- (void)openSection:(NSInteger)section;
+- (void)closeSection:(NSInteger)section;
+
+
+
+
+
+@end

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BXGIndicateView">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbh-1L-ZPj">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-w5-c7J" userLabel="breakBtn">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="Iox-Of-YQJ"/>
+                        <constraint firstAttribute="width" constant="10" id="YkC-Ve-ZEE"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-HV-ofI">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="2JJ-b7-byS"/>
+                        <constraint firstAttribute="height" constant="13" id="Va8-XY-f63"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZB-Rx-yZy" userLabel="lessonBtn">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="fHW-X7-0Nf"/>
+                        <constraint firstAttribute="height" constant="10" id="pEI-uR-caD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有课" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC2-X2-J1A">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="KbN-kI-RQ8"/>
+                        <constraint firstAttribute="height" constant="13" id="RnV-cC-obQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0n5-HV-ofI" firstAttribute="centerY" secondItem="Nbh-1L-ZPj" secondAttribute="centerY" id="1gS-6d-1ef"/>
+                <constraint firstItem="0n5-HV-ofI" firstAttribute="leading" secondItem="tcy-w5-c7J" secondAttribute="trailing" constant="5" id="91D-OW-m81"/>
+                <constraint firstItem="wC2-X2-J1A" firstAttribute="centerY" secondItem="Nbh-1L-ZPj" secondAttribute="centerY" id="Iwr-ns-ncu"/>
+                <constraint firstAttribute="trailing" secondItem="wC2-X2-J1A" secondAttribute="trailing" constant="14" id="JAg-qa-We1"/>
+                <constraint firstItem="7ZB-Rx-yZy" firstAttribute="leading" secondItem="0n5-HV-ofI" secondAttribute="trailing" constant="24" id="Lnh-UU-cbu"/>
+                <constraint firstItem="tcy-w5-c7J" firstAttribute="centerY" secondItem="Nbh-1L-ZPj" secondAttribute="centerY" id="Op0-7P-Uka"/>
+                <constraint firstItem="Nbh-1L-ZPj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="TPS-Mp-kdA"/>
+                <constraint firstItem="wC2-X2-J1A" firstAttribute="leading" secondItem="7ZB-Rx-yZy" secondAttribute="trailing" constant="4" id="XM2-D5-D5q"/>
+                <constraint firstItem="tcy-w5-c7J" firstAttribute="leading" secondItem="Nbh-1L-ZPj" secondAttribute="trailing" constant="8" id="XlQ-uW-vHg"/>
+                <constraint firstItem="7ZB-Rx-yZy" firstAttribute="centerY" secondItem="Nbh-1L-ZPj" secondAttribute="centerY" id="b5o-dW-eOz"/>
+                <constraint firstItem="Nbh-1L-ZPj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="v9s-XK-YSH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="breakBtn" destination="tcy-w5-c7J" id="FVm-cg-ZcO"/>
+                <outlet property="lessonBtn" destination="7ZB-Rx-yZy" id="zvu-fw-V1Q"/>
+                <outlet property="selectDayLabel" destination="Nbh-1L-ZPj" id="aDo-TL-6M6"/>
+            </connections>
+            <point key="canvasLocation" x="164" y="234.5"/>
+        </view>
+    </objects>
+</document>

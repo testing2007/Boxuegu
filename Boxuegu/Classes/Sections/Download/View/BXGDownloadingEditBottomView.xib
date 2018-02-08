@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BXGDownloadingEditBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-9f-jnn">
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="确认删除">
+                        <color key="titleColor" red="1" green="0.33333333333333331" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickDelete:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZGB-W1-EjU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ccj-9f-jnn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TaO-IL-w1f"/>
+                <constraint firstAttribute="bottom" secondItem="Ccj-9f-jnn" secondAttribute="bottom" id="hzM-hK-kwq"/>
+                <constraint firstAttribute="trailing" secondItem="Ccj-9f-jnn" secondAttribute="trailing" id="w6k-MQ-Tkh"/>
+                <constraint firstItem="Ccj-9f-jnn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yyU-Vu-HRq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="confirmDeleteBtn" destination="Ccj-9f-jnn" id="ucr-Gl-nds"/>
+            </connections>
+        </view>
+    </objects>
+</document>
